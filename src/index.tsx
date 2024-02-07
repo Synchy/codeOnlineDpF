@@ -32,7 +32,6 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const apolloClient = new ApolloClient({
-  uri: process.env.REACT_APP_GRAPHQL_URI,
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
